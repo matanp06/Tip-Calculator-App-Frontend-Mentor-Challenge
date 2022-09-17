@@ -1,0 +1,66 @@
+body {
+  background-color: hsl(185deg, 41%, 84%);
+}
+body #logo {
+  display: block;
+  margin: 50px auto;
+}
+body .container {
+  width: 600px;
+  background-color: hsl(0deg, 0%, 100%);
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+}
+body .container div {
+  width: 300px;
+}
+body .container div .input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 5px;
+}
+body .container div .input img {
+  box-sizing: border-box;
+  padding: 3px;
+}
+body .container div .input input {
+  flex: 1;
+  border: none;
+  background-color: red;
+}
+body .container div .grid-precentage {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+body .container div .grid-precentage .precentage {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+body .container div .grid-precentage .custom {
+  text-align: center;
+}
+body .container #output-section {
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+body .container #output-section .output {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+body .container #output-section button {
+  width: 80%;
+  margin: auto auto 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*# sourceMappingURL=styles.css.map */

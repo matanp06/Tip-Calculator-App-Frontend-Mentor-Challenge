@@ -1,0 +1,93 @@
+body{
+    background-color: hsl(185, 41%, 84%);
+
+    #logo{
+
+        display: block;
+        margin: 50px auto;
+
+    }
+
+    .container{
+        width: 600px;
+        background-color: hsl(0, 0%, 100%);
+        margin: auto;
+        padding: 20px;
+        border-radius: 20px;
+        display: flex;
+
+        div{
+
+            width: 300px;
+            .input{
+
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                box-sizing: border-box;
+                padding: 5px;
+                img{
+                    box-sizing: border-box;
+                    padding: 3px;
+                }
+
+                input{
+                    flex: 1;
+                    border: none;
+                    background-color: red;
+                }
+
+            }
+
+            .grid-precentage{
+
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(3,minmax(0,1fr));
+
+                .precentage{
+
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+
+                }
+
+                .custom{
+
+                    text-align: center;
+
+                }
+
+            }
+
+        }
+
+        #output-section{
+
+            position: relative;
+            box-sizing: border-box;
+            padding:20px;
+            display: flex;
+            flex-direction: column;
+            .output{
+
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+            }
+
+            button{
+
+                width: 80%;
+                margin: auto auto 0;
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+            }
+
+        }
+
+    }
+
+}
