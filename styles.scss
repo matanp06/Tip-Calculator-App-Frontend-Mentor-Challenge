@@ -1,5 +1,17 @@
 body{
+
     background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono',monospace;
+
+    .bg-green{
+        background-color: hsl(183, 100%, 15%);
+    }
+
+    .pressable{
+
+        cursor: pointer;
+
+    }
 
     #logo{
 
@@ -9,32 +21,61 @@ body{
     }
 
     .container{
-        width: 600px;
+        width: 720px;
         background-color: hsl(0, 0%, 100%);
         margin: auto;
-        padding: 20px;
+        padding: 40px;
         border-radius: 20px;
         display: flex;
+        justify-content: space-between;
 
         div{
 
-            width: 300px;
+            p{
+                margin: 5px 0
+            }
+            
+            .input-div{
+
+                margin: 30px 0;
+
+                p{
+
+                    color: hsl(186, 14%, 43%);
+
+                }
+                
+            }
+
+            width: 340px;
             .input{
 
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 box-sizing: border-box;
-                padding: 5px;
+                padding: 5px 15px;
+                background-color: hsl(189, 41%, 97%);
+                justify-content: space-between;
+                align-items: center;
+
                 img{
-                    box-sizing: border-box;
-                    padding: 3px;
+                    height: 50%;
                 }
 
                 input{
                     flex: 1;
                     border: none;
-                    background-color: red;
+                    background-color: transparent;
+                    color: hsl(184, 14%, 56%);
+                    text-align: right;
+                    font-size: 24px;
+                    max-width: 70%;
+                    font-family: inherit;
+                }
+
+                input:focus, input:focus-visible{
+                    outline: none;
                 }
 
             }
@@ -42,19 +83,25 @@ body{
             .grid-precentage{
 
                 display: grid;
-                gap: 10px;
+                gap: 15px;
                 grid-template-columns: repeat(3,minmax(0,1fr));
 
                 .precentage{
 
+                    font-size: 24px;
+                    border-radius: 5px;
+                    border: none;
                     padding-top: 5px;
                     padding-bottom: 5px;
+                    color:hsl(0, 0%, 100%);
+                    font-family: inherit;
 
                 }
 
                 .custom{
 
                     text-align: center;
+                    color: hsl(186deg, 14%, 43%)
 
                 }
 
@@ -66,23 +113,38 @@ body{
 
             position: relative;
             box-sizing: border-box;
-            padding:20px;
+            padding:30px;
             display: flex;
             flex-direction: column;
+            border-radius: 15px;
             .output{
 
                 display: flex;
                 width: 100%;
                 justify-content: space-between;
+                align-items: center;
+
+                .bold{
+                    color: hsl(0, 0%, 100%);
+                }
+                .small{
+                    color:  hsl(184, 14%, 56%);
+                    font-size: small;
+                }
+
+                h1{
+                    color:hsl(172, 67%, 45%)
+                }
 
             }
 
             button{
 
-                width: 80%;
+                width: 100%;
                 margin: auto auto 0;
                 padding-top: 5px;
                 padding-bottom: 5px;
+                font-size: 24px;
 
             }
 

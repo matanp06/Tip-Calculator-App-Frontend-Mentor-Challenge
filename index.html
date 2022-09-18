@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
@@ -27,19 +29,19 @@
         <p>Bill</p>
         <div class="input">
           <img src="images/icon-dollar.svg" alt="">
-          <input id="input-bill" type="text">
+          <input class="pressable" id="input-bill" type="text" placeholder="0">
         </div>
       </div>
   
       <div class="input-div">
         <p>Select Tip %</p>
         <div class="grid-precentage">
-          <button class="precentage selected" value="5">5%</button>
-          <button class="precentage" value="10">10%</button> 
-          <button class="precentage" value="15">15%</button> 
-          <button class="precentage" value="25">25%</button> 
-          <button class="precentage" value="50">50%</button> 
-          <input class="precentage custom" type="numbers" placeholder="Custom">
+          <button class="pressable bg-green precentage selected" value="5">5%</button>
+          <button class="pressable bg-green precentage" value="10">10%</button> 
+          <button class="pressable bg-green precentage" value="15">15%</button> 
+          <button class="pressable bg-green precentage" value="25">25%</button> 
+          <button class="pressable bg-green precentage" value="50">50%</button> 
+          <input class="pressable precentage custom" type="numbers" placeholder="Custom">
         </div>
       </div>
   
@@ -47,30 +49,30 @@
         <p>Number of People</p>
         <div class="input">
           <img src="images/icon-person.svg" alt="">
-          <input id="input-person" type="text">
+          <input class="pressable" id="input-person" type="text" placeholder="0">
         </div>
       </div>
     </div>
 
     <!-- Out Section -->
-    <div id="output-section">
+    <div class="bg-green" id="output-section">
       <div class="output">
         <div class="details">
           <p class="bold">Tip Amount</p>
-          <p>/ person</p> 
+          <p class="small">/ person</p> 
         </div>
-        <h1>test</h1>
+        <h1 id="Tip-Amount">$0.00</h1>
       </div>
 
       <div class="output">
         <div class="details">
-          <p class="bold">Tip Amount</p>
-          <p>/ person</p> 
+          <p class="bold">Total</p>
+          <p class="small">/ person</p> 
         </div>
-        <h1>test</h1>
+        <h1 id="Total">$0.00</h1>
       </div>
 
-      <button>RESET</button>
+      <button class="pressable">RESET</button>
 
     </div>
 

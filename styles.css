@@ -1,66 +1,112 @@
 body {
   background-color: hsl(185deg, 41%, 84%);
+  font-family: "Space Mono", monospace;
+}
+body .bg-green {
+  background-color: hsl(183deg, 100%, 15%);
+}
+body .pressable {
+  cursor: pointer;
 }
 body #logo {
   display: block;
   margin: 50px auto;
 }
 body .container {
-  width: 600px;
+  width: 720px;
   background-color: hsl(0deg, 0%, 100%);
   margin: auto;
-  padding: 20px;
+  padding: 40px;
   border-radius: 20px;
   display: flex;
+  justify-content: space-between;
 }
 body .container div {
-  width: 300px;
+  width: 340px;
+}
+body .container div p {
+  margin: 5px 0;
+}
+body .container div .input-div {
+  margin: 30px 0;
+}
+body .container div .input-div p {
+  color: hsl(186deg, 14%, 43%);
 }
 body .container div .input {
   width: 100%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 5px 15px;
+  background-color: hsl(189deg, 41%, 97%);
+  justify-content: space-between;
+  align-items: center;
 }
 body .container div .input img {
-  box-sizing: border-box;
-  padding: 3px;
+  height: 50%;
 }
 body .container div .input input {
   flex: 1;
   border: none;
-  background-color: red;
+  background-color: transparent;
+  color: hsl(184deg, 14%, 56%);
+  text-align: right;
+  font-size: 24px;
+  max-width: 70%;
+  font-family: inherit;
+}
+body .container div .input input:focus, body .container div .input input:focus-visible {
+  outline: none;
 }
 body .container div .grid-precentage {
   display: grid;
-  gap: 10px;
+  gap: 15px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 body .container div .grid-precentage .precentage {
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
   padding-top: 5px;
   padding-bottom: 5px;
+  color: hsl(0deg, 0%, 100%);
+  font-family: inherit;
 }
 body .container div .grid-precentage .custom {
   text-align: center;
+  color: hsl(186deg, 14%, 43%);
 }
 body .container #output-section {
   position: relative;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
 }
 body .container #output-section .output {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
+}
+body .container #output-section .output .bold {
+  color: hsl(0deg, 0%, 100%);
+}
+body .container #output-section .output .small {
+  color: hsl(184deg, 14%, 56%);
+  font-size: small;
+}
+body .container #output-section .output h1 {
+  color: hsl(172deg, 67%, 45%);
 }
 body .container #output-section button {
-  width: 80%;
+  width: 100%;
   margin: auto auto 0;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=styles.css.map */
