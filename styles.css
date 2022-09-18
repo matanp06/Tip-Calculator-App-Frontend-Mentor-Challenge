@@ -13,6 +13,14 @@ body #logo {
   display: block;
   margin: 50px auto;
 }
+body input::-webkit-outer-spin-button,
+body input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+body input[type=number] {
+  -moz-appearance: textfield;
+}
 body .container {
   width: 720px;
   background-color: hsl(0deg, 0%, 100%);
@@ -29,6 +37,7 @@ body .container div p {
   margin: 5px 0;
 }
 body .container div .input-div {
+  position: relative;
   margin: 30px 0;
 }
 body .container div .input-div p {
@@ -43,6 +52,7 @@ body .container div .input {
   background-color: hsl(189deg, 41%, 97%);
   justify-content: space-between;
   align-items: center;
+  border-radius: 2px;
 }
 body .container div .input img {
   height: 50%;
@@ -63,6 +73,23 @@ body .container div .input input::placeholder {
 body .container div .input input:focus, body .container div .input input:focus-visible {
   outline: none;
 }
+body .container div .input:focus-within {
+  outline: 3px solid hsl(172deg, 67%, 45%);
+}
+body .container div .input-div p.invalid {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  color: red;
+  visibility: hidden;
+}
+body .container div .input-div.invalid .input {
+  outline: 3px solid red;
+}
+body .container div .input-div.invalid p.invalid {
+  visibility: visible;
+}
 body .container div .grid-precentage {
   display: grid;
   gap: 15px;
@@ -77,9 +104,24 @@ body .container div .grid-precentage .precentage {
   color: hsl(0deg, 0%, 100%);
   font-family: inherit;
 }
+body .container div .grid-precentage .precentage.selected {
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+}
 body .container div .grid-precentage .custom {
   text-align: center;
   color: hsl(183deg, 100%, 15%);
+  background-color: hsl(189deg, 41%, 97%);
+}
+body .container div .grid-precentage .custom:focus {
+  outline: 3px solid hsl(172deg, 67%, 45%);
+  border-radius: 2px;
+}
+body .container div .grid-precentage .custom.selected {
+  outline: 3px solid hsl(172deg, 67%, 45%);
+  background-color: initial;
+  color: initial;
+  border-radius: 2px;
 }
 body .container #output-section {
   position: relative;

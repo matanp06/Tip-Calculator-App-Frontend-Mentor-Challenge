@@ -3,7 +3,7 @@ body{
     background-color: hsl(185, 41%, 84%);
     font-family: 'Space Mono',monospace;
     margin: 0;
-    
+
     .bg-green{
         background-color: hsl(183, 100%, 15%);
     }
@@ -19,6 +19,15 @@ body{
         display: block;
         margin: 50px auto;
 
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button{
+        appearance: none;
+        margin: 0;
+    }
+    input[type=number]{
+        -moz-appearance: textfield;
     }
 
     .container{
@@ -38,6 +47,7 @@ body{
             
             .input-div{
 
+                position: relative;
                 margin: 30px 0;
 
                 p{
@@ -59,6 +69,7 @@ body{
                 background-color: hsl(189, 41%, 97%);
                 justify-content: space-between;
                 align-items: center;
+                border-radius: 2px;
 
                 img{
                     height: 50%;
@@ -85,6 +96,30 @@ body{
 
             }
 
+            .input:focus-within{
+                outline: 3px solid hsl(172, 67%, 45%);
+            }
+
+            .input-div p.invalid{
+                position: absolute;
+                right: 0;
+                top: 0;
+                margin: 0;
+                color: red;
+                visibility: hidden;
+            }
+
+            .input-div.invalid {
+
+                .input{
+                    outline: 3px solid red;
+                }
+                p.invalid{
+                    visibility:visible;
+                }
+
+            }
+
             .grid-precentage{
 
                 display: grid;
@@ -103,11 +138,33 @@ body{
 
                 }
 
+                .precentage.selected{
+                    
+                    background-color: hsl(172, 67%, 45%);
+                    color:hsl(183, 100%, 15%);
+
+                }
+
                 .custom{
 
                     text-align: center;
                     color: hsl(183,100%,15%);
+                    background-color: hsl(189, 41%, 97%);
 
+                }
+
+                .custom:focus{
+                
+                    outline: 3px solid hsl(172, 67%, 45%);
+                    border-radius: 2px;
+                
+                }
+
+                .custom.selected{ 
+                    outline: 3px solid hsl(172, 67%, 45%);
+                    background-color: initial;
+                    color: initial;
+                    border-radius: 2px;
                 }
 
             }
