@@ -2,7 +2,8 @@ body{
 
     background-color: hsl(185, 41%, 84%);
     font-family: 'Space Mono',monospace;
-
+    margin: 0;
+    
     .bg-green{
         background-color: hsl(183, 100%, 15%);
     }
@@ -67,11 +68,15 @@ body{
                     flex: 1;
                     border: none;
                     background-color: transparent;
-                    color: hsl(184, 14%, 56%);
+                    color:  hsl(183, 100%, 15%);
                     text-align: right;
                     font-size: 24px;
                     max-width: 70%;
                     font-family: inherit;
+                }
+
+                input::placeholder{
+                    color: hsl(184, 14%, 56%);
                 }
 
                 input:focus, input:focus-visible{
@@ -101,7 +106,7 @@ body{
                 .custom{
 
                     text-align: center;
-                    color: hsl(186deg, 14%, 43%)
+                    color: hsl(183,100%,15%);
 
                 }
 
@@ -123,6 +128,10 @@ body{
                 width: 100%;
                 justify-content: space-between;
                 align-items: center;
+                
+                .details{
+                    line-height: 1;
+                }
 
                 .bold{
                     color: hsl(0, 0%, 100%);
@@ -145,11 +154,50 @@ body{
                 padding-top: 5px;
                 padding-bottom: 5px;
                 font-size: 24px;
+                color: hsl(183deg, 100%, 15%);
+                background-color: hsl(172, 67%, 45%);
+                border: none;
+                border-radius: 5px;
 
+            }
+            
+            button:disabled{
+                opacity: 0.3;
+                cursor:default;
             }
 
         }
 
     }
 
+}
+
+@media(max-width:800px){
+    body{
+
+        .container{
+            width: 100%;
+            max-width: 400px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            box-sizing: border-box;
+            margin-left:auto ;
+            margin-right: auto;
+    
+            div{
+                width: 100%;
+                .input-div:first-child{
+                    margin-top: 0;
+                }
+
+                .grid-precentage{
+                    grid-template-columns: repeat(2,minmax(0,1fr));
+                }
+            }
+    
+        }    
+
+    }
+    
 }
