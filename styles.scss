@@ -1,11 +1,23 @@
+:root{
+
+    --strongCyne:hsl(172, 67%, 45%);
+    --veryDarkCyne:hsl(183, 100%, 15%);
+    --grayishCyne:hsl(184, 14%, 56%);
+    --lightGrayishCyne:hsl(185, 41%, 84%);
+    --veryLightGrayishCyne:hsl(189, 41%, 97%);
+    --white:hsl(0, 0%, 100%);
+
+
+}
+
 body{
 
-    background-color: hsl(185, 41%, 84%);
+    background-color: var(--lightGrayishCyne);
     font-family: 'Space Mono',monospace;
     margin: 0;
 
     .bg-green{
-        background-color: hsl(183, 100%, 15%);
+        background-color: var(--veryDarkCyne);
     }
 
     .pressable{
@@ -32,7 +44,7 @@ body{
 
     .container{
         width: 720px;
-        background-color: hsl(0, 0%, 100%);
+        background-color: var(--white);
         margin: auto;
         padding: 40px;
         border-radius: 20px;
@@ -66,7 +78,7 @@ body{
                 justify-content: center;
                 box-sizing: border-box;
                 padding: 5px 15px;
-                background-color: hsl(189, 41%, 97%);
+                background-color: var(--veryLightGrayishCyne);
                 justify-content: space-between;
                 align-items: center;
                 border-radius: 2px;
@@ -79,7 +91,7 @@ body{
                     flex: 1;
                     border: none;
                     background-color: transparent;
-                    color:  hsl(183, 100%, 15%);
+                    color:  var(--veryDarkCyne);
                     text-align: right;
                     font-size: 24px;
                     max-width: 70%;
@@ -87,7 +99,7 @@ body{
                 }
 
                 input::placeholder{
-                    color: hsl(184, 14%, 56%);
+                    color: var(--grayishCyne);
                 }
 
                 input:focus, input:focus-visible{
@@ -97,7 +109,7 @@ body{
             }
 
             .input:focus-within{
-                outline: 3px solid hsl(172, 67%, 45%);
+                outline: 3px solid var(--strongCyne);
             }
 
             .input-div p.invalid{
@@ -133,15 +145,15 @@ body{
                     border: none;
                     padding-top: 5px;
                     padding-bottom: 5px;
-                    color:hsl(0, 0%, 100%);
+                    color:var(--white);
                     font-family: inherit;
 
                 }
 
                 .precentage.selected{
                     
-                    background-color: hsl(172, 67%, 45%);
-                    color:hsl(183, 100%, 15%);
+                    background-color: var(--strongCyne);
+                    color:var(--veryDarkCyne);
 
                 }
 
@@ -149,21 +161,20 @@ body{
 
                     text-align: center;
                     color: hsl(183,100%,15%);
-                    background-color: hsl(189, 41%, 97%);
+                    background-color: var(--veryLightGrayishCyne);
 
                 }
 
                 .custom:focus{
                 
-                    outline: 3px solid hsl(172, 67%, 45%);
+                    outline: 3px solid var(--strongCyne);
                     border-radius: 2px;
                 
                 }
 
                 .custom.selected{ 
-                    outline: 3px solid hsl(172, 67%, 45%);
-                    background-color: initial;
-                    color: initial;
+                    outline: 3px solid var(--strongCyne);
+                    background-color: var(--veryLightGrayishCyne);
                     border-radius: 2px;
                 }
 
@@ -191,15 +202,15 @@ body{
                 }
 
                 .bold{
-                    color: hsl(0, 0%, 100%);
+                    color: var(--white);
                 }
                 .small{
-                    color:  hsl(184, 14%, 56%);
+                    color:  var(--grayishCyne);
                     font-size: small;
                 }
 
                 h1{
-                    color:hsl(172, 67%, 45%)
+                    color:var(--strongCyne)
                 }
 
             }
@@ -212,7 +223,7 @@ body{
                 padding-bottom: 5px;
                 font-size: 24px;
                 color: hsl(183deg, 100%, 15%);
-                background-color: hsl(172, 67%, 45%);
+                background-color: var(--strongCyne);
                 border: none;
                 border-radius: 5px;
 

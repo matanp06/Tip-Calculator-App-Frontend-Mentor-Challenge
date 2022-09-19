@@ -1,10 +1,19 @@
+:root {
+  --strongCyne:hsl(172, 67%, 45%);
+  --veryDarkCyne:hsl(183, 100%, 15%);
+  --grayishCyne:hsl(184, 14%, 56%);
+  --lightGrayishCyne:hsl(185, 41%, 84%);
+  --veryLightGrayishCyne:hsl(189, 41%, 97%);
+  --white:hsl(0, 0%, 100%);
+}
+
 body {
-  background-color: hsl(185deg, 41%, 84%);
+  background-color: var(--lightGrayishCyne);
   font-family: "Space Mono", monospace;
   margin: 0;
 }
 body .bg-green {
-  background-color: hsl(183deg, 100%, 15%);
+  background-color: var(--veryDarkCyne);
 }
 body .pressable {
   cursor: pointer;
@@ -23,7 +32,7 @@ body input[type=number] {
 }
 body .container {
   width: 720px;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: var(--white);
   margin: auto;
   padding: 40px;
   border-radius: 20px;
@@ -49,7 +58,7 @@ body .container div .input {
   justify-content: center;
   box-sizing: border-box;
   padding: 5px 15px;
-  background-color: hsl(189deg, 41%, 97%);
+  background-color: var(--veryLightGrayishCyne);
   justify-content: space-between;
   align-items: center;
   border-radius: 2px;
@@ -61,20 +70,20 @@ body .container div .input input {
   flex: 1;
   border: none;
   background-color: transparent;
-  color: hsl(183deg, 100%, 15%);
+  color: var(--veryDarkCyne);
   text-align: right;
   font-size: 24px;
   max-width: 70%;
   font-family: inherit;
 }
 body .container div .input input::placeholder {
-  color: hsl(184deg, 14%, 56%);
+  color: var(--grayishCyne);
 }
 body .container div .input input:focus, body .container div .input input:focus-visible {
   outline: none;
 }
 body .container div .input:focus-within {
-  outline: 3px solid hsl(172deg, 67%, 45%);
+  outline: 3px solid var(--strongCyne);
 }
 body .container div .input-div p.invalid {
   position: absolute;
@@ -101,26 +110,25 @@ body .container div .grid-precentage .precentage {
   border: none;
   padding-top: 5px;
   padding-bottom: 5px;
-  color: hsl(0deg, 0%, 100%);
+  color: var(--white);
   font-family: inherit;
 }
 body .container div .grid-precentage .precentage.selected {
-  background-color: hsl(172deg, 67%, 45%);
-  color: hsl(183deg, 100%, 15%);
+  background-color: var(--strongCyne);
+  color: var(--veryDarkCyne);
 }
 body .container div .grid-precentage .custom {
   text-align: center;
   color: hsl(183deg, 100%, 15%);
-  background-color: hsl(189deg, 41%, 97%);
+  background-color: var(--veryLightGrayishCyne);
 }
 body .container div .grid-precentage .custom:focus {
-  outline: 3px solid hsl(172deg, 67%, 45%);
+  outline: 3px solid var(--strongCyne);
   border-radius: 2px;
 }
 body .container div .grid-precentage .custom.selected {
-  outline: 3px solid hsl(172deg, 67%, 45%);
-  background-color: initial;
-  color: initial;
+  outline: 3px solid var(--strongCyne);
+  background-color: var(--veryLightGrayishCyne);
   border-radius: 2px;
 }
 body .container #output-section {
@@ -141,14 +149,14 @@ body .container #output-section .output .details {
   line-height: 1;
 }
 body .container #output-section .output .bold {
-  color: hsl(0deg, 0%, 100%);
+  color: var(--white);
 }
 body .container #output-section .output .small {
-  color: hsl(184deg, 14%, 56%);
+  color: var(--grayishCyne);
   font-size: small;
 }
 body .container #output-section .output h1 {
-  color: hsl(172deg, 67%, 45%);
+  color: var(--strongCyne);
 }
 body .container #output-section button {
   width: 100%;
@@ -157,7 +165,7 @@ body .container #output-section button {
   padding-bottom: 5px;
   font-size: 24px;
   color: hsl(183deg, 100%, 15%);
-  background-color: hsl(172deg, 67%, 45%);
+  background-color: var(--strongCyne);
   border: none;
   border-radius: 5px;
 }
